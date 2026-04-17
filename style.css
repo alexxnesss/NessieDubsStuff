@@ -259,7 +259,7 @@ display: block;
 .home-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 .home-text {
@@ -278,7 +278,7 @@ display: block;
 .edit-text {
     position: relative;
     top: -20%;
-    right: 90px;
+    right: 190px;
     text-align: left;
     transform: translateX(-12.5%);
 
