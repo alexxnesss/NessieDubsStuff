@@ -38,9 +38,87 @@
 <body>
 <main>
     <section>
-        <h2>Dubs Coletivas</h2>
-        <p>Em breve...</p>
-    </section>
+        <h2>Dubs/Covers Coletivas</h2>
+        <h3>Dobragens</h3>
+        <p><i> Seleciona uma dub e vê a versão portuguesa (não oficial) feita por grupos de fã-dobragens :]</i></p>
+    <section>
+        <section class="covers-grid">
+            <a class="cover-card" href="https://www.youtube.com/playlist?list=PLWb77ZdUojKxvep1HVaUWez_WwHEAHsHx" target="_blank" rel="noopener noreferrer">
+                <img class="covers_img" src="co09-thumb.jpg" alt="Class of 09">
+                <div class="cover-caption">
+                    <h4>Class of '09</h4>
+                    <p>SBN4 (Fã-Dobrado pela EcoFã Studios)</p>
+                </div>
+            </a>
+            <a class="cover-card" href="https://youtu.be/TG9jPgmmjEs?si=y9-aMXfrER1E20QH" target="_blank" rel="noopener noreferrer">
+                <img class="covers_img" src="cliffside-thumb.jpg" alt="Cliffside">
+                <div class="cover-caption">
+                    <h4>Cliffside</h4>
+                    <p>Liam Vickers (Fã-Dobrado pela ManyDubs)</p>
+                </div>
+            </a>
+            <a class="cover-card" href="https://youtube.com/playlist?list=PLWb77ZdUojKx86gpKhzijKuxphd_fNRZf&si=fiY-gBzfTw_P6Ts-" target="_blank" rel="noopener noreferrer">
+                <img class="covers_img" src="ena-thumb.jpg" alt="ENA">
+                <div class="cover-caption">
+                    <h4>ENA</h4>
+                    <p>Joel G (Fã-Dobrado pela EcoFã Studios)</p>
+                </div>
+            </a>
+            <a class="cover-card" href="https://youtube.com/playlist?list=PLWb77ZdUojKwCdlQVTNiPZu_YHc-pyLEu&si=jjBLzj2mx_Z1b0e1" target="_blank" rel="noopener noreferrer">
+                <img class="covers_img" src="omori-thumb.jpg" alt="Omori">
+                <div class="cover-caption">
+                    <h4>Omori</h4>
+                    <p>Omocat (Fã-Dobrado pela EcoFã Studios)</p>
+                </div>
+            </a>
+            <a class="cover-card" href="https://linktr.ee/spportugal" target="_blank" rel="noopener noreferrer">
+                <img class="covers_img" src="southpark-thumb.jpg" alt="South Park">
+                <div class="cover-caption">
+                    <h4>South Park</h4>
+                    <p>Trey Parker & Matt Stone (Fã-Dobrado pela EcoFã Studios)</p>
+                </div>
+            </a>
+            <a class="cover-card" href="https://youtube.com/playlist?list=PLHqMROk6LqP5lEaqnZi6-zimvBuTm_cBs&si=sbnAvbRGGJPjZgmT" target="_blank" rel="noopener noreferrer">
+                <img class="covers_img" src="underverse-thumb.jpg" alt="Underverse">
+                <div class="cover-caption">
+                    <h4>Underverse</h4>
+                    <p>Jael Peñaloza (Fã-Dobrado pela MegaDubs)</p>
+                </div>
+            </a>
+        </section>
+        <h3>Covers</h3>
+        <section>
+            <p><i> Seleciona uma música e ouve a versão portuguesa (não oficial) feita por grupos de fã-dobragens :]</i></p>
+            <audio id="cover-audio" controls>
+                O seu navegador não suporta o elemento de áudio.
+            </audio>
+        </section>
+        <section class="covers-grid">
+            <div class="cover-card" data-audio="justmonika_ptpt.mp3">
+                <img class="covers_img" src="justmonika-thumb.jpg" alt="Just Monika de Doki Doki Literature Club">
+                <div class="cover-caption">
+                    <h4>Just Monika (Random Encounters)</h4>
+                    <p>Doki Doki Literature Club (Cover por Melodie Studios)</p>
+                </div>
+            </div>
+        </section>
 </main>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const audioPlayer = document.getElementById('cover-audio');
+        const coverCards = document.querySelectorAll('.cover-card[data-audio]');
+
+        coverCards.forEach(card => {
+            card.addEventListener('click', function() {
+                const audioSrc = card.getAttribute('data-audio');
+                if (!audioSrc) return;
+                audioPlayer.src = audioSrc;
+                audioPlayer.play().catch(() => {
+                    // Navegadores podem bloquear reprodução automática sem interação do usuário.
+                });
+            });
+        });
+    });
+</script>
 </body>
 </html>
