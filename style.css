@@ -342,12 +342,15 @@ display: block;
 }
 
 .cover-card {
+    display: block;
     position: relative;
     overflow: hidden;
     border-radius: 14px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    color: inherit;
 }
 
 .cover-card:hover {
