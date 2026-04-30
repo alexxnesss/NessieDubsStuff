@@ -39,21 +39,117 @@
 <main>
     <section>
         <h2>Dubs Individuais</h2>
-        <h3>por adicionar e retocar...</h3>
+        <h3>Covers</h3>
         <section>
-            <h3>Coração Sem Alma (Áudio)</h3>
-            <audio controls loop>
-                <source src="coraçãosemalma.mp3" type="audio/mpeg">
+            <p><i> Seleciona uma música e ouve a versão portuguesa (não oficial) feita por mim :]</i></p>
+            <audio id="cover-audio" controls>
+                O seu navegador não suporta o elemento de áudio.
             </audio>
         </section>
-
-        <section>
-            <h3>Coração Sem Alma (Vídeo)</h3>
-            <video width="100%" controls poster="ink-sans-thumb.jpg">
-                <source src="coraçãosemalma.mp4" type="video/mp4">
-            </video>
+        <section class="covers-grid">
+            <div class="cover-card" data-audio="brighter_ptpt.mp3">
+                <img class="covers_img" src="brighter-thumb.jpg" alt="Brighter de Hazbin Hotel">
+                <div class="cover-caption">
+                    <h4>Brighter</h4>
+                    <p>Hazbin Hotel</p>
+                </div>
+            </div>
+            <div class="cover-card" data-audio="creativecontrol_ptpt.mp3">
+                <img class="covers_img" src="creativecontrol-thumb.jpg" alt="Creative Control por SMG4">
+                <div class="cover-caption">
+                    <h4>Creative Control</h4>
+                    <p>SMG4</p>
+                </div>
+            </div>
+            <div class="cover-card" data-audio="dontforget_ptpt.mp3">
+                <img class="covers_img" src="dontforget-thumb.jpg" alt="Don't Forget de Deltarune">
+                <div class="cover-caption">
+                    <h4>Don't Forget</h4>
+                    <p>Deltarune</p>
+                </div>
+            </div>
+            <div class="cover-card" data-audio="duet_ptpt.mp3">
+                <img class="covers_img" src="duet-thumb.jpg" alt="Duet de Omori">
+                <div class="cover-caption">
+                    <h4>Duet</h4>
+                    <p>Omori</p>
+                </div>
+            </div>
+            <div class="cover-card" data-audio="eternaldream_ptpt.mp3">
+                <img class="covers_img" src="eternaldream-thumb.jpg" alt="Eternal Dream de Murder Drones">
+                <div class="cover-caption">
+                    <h4>Eternal Dream</h4>
+                    <p>Murder Drones</p>
+                </div>
+            </div>
+            <div class="cover-card" data-audio="itstvtime_ptpt.mp3">
+                <img class="covers_img" src="itstvtime-thumb.jpg" alt="It's TV Time de Deltarune">
+                <div class="cover-caption">
+                    <h4>It's TV Time</h4>
+                    <p>Deltarune</p>
+                </div>
+            </div>
+            <div class="cover-card" data-audio="sandiego_ptpt.mp3">
+                <img class="covers_img" src="sandiego-thumb.jpg" alt="Jackin' It in San Diego de South Park">
+                <div class="cover-caption">
+                    <h4>Jackin' It in San Diego</h4>
+                    <p>South Park</p>
+                </div>
+            </div>
+            <div class="cover-card" data-audio="soullessheart_ptpt.mp3">
+                <img class="covers_img" src="soullessheart-thumb.jpg" alt="Soulless Heart de Underverse">
+                <div class="cover-caption">
+                    <h4>Soulless Heart</h4>
+                    <p>Underverse</p>
+                </div>
+            </div>
+            <div class="cover-card" data-audio="stopbullying_ptpt.mp3">
+                <img class="covers_img" src="stopbullying-thumb.PNG" alt="Stop Bullying de South Park">
+                <div class="cover-caption">
+                    <h4>Stop Bullying</h4>
+                    <p>South Park</p>
+                </div>
+            </div>
+            <div class="cover-card" data-audio="vssusie_ptpt.mp3">
+                <img class="covers_img" src="vssusie-thumb.jpg" alt="Vs. Susie (Remix) de Deltarune">
+                <div class="cover-caption">
+                    <h4>Vs. Susie (Remix)</h4>
+                    <p>Deltarune</p>
+                </div>
+            </div>
+            <div class="cover-card" data-audio="waitforyou_ptpt.mp3">
+                <img class="covers_img" src="waitforyou-thumb.jpg" alt="Waiting for You de Underverse">
+                <div class="cover-caption">
+                    <h4>Waiting for You</h4>
+                    <p>Underverse</p>
+                </div>
+            </div>
+            <div class="cover-card" data-audio="gdwywd_ptpt.mp3">
+                <img class="covers_img" src="gdwywd-thumb.jpg" alt="You Gotta Do Whatcha Wanna Do de South Park">
+                <div class="cover-caption">
+                    <h4>You Gotta Do Whatcha Wanna Do</h4>
+                    <p>South Park</p>
+                </div>
+            </div>
         </section>
-    </section>
+        </section>
 </main>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const audioPlayer = document.getElementById('cover-audio');
+        const coverCards = document.querySelectorAll('.cover-card[data-audio]');
+
+        coverCards.forEach(card => {
+            card.addEventListener('click', function() {
+                const audioSrc = card.getAttribute('data-audio');
+                if (!audioSrc) return;
+                audioPlayer.src = audioSrc;
+                audioPlayer.play().catch(() => {
+                    // Navegadores podem bloquear reprodução automática sem interação do usuário.
+                });
+            });
+        });
+    });
+</script>
 </body>
 </html>

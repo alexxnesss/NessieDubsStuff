@@ -334,6 +334,57 @@ display: block;
 
 }
 
+.covers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.cover-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cover-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.cover-card .covers_img {
+    display: block;
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+}
+
+.cover-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 14px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.cover-caption h4 {
+    margin: 0 0 4px;
+    font-size: 1.1rem;
+}
+
+.cover-caption p {
+    margin: 0;
+    font-size: 0.95rem;
+    opacity: 0.92;
+}
+
 .contact-container {
     display: flex;
     align-items: center;
