@@ -80,15 +80,18 @@ color: #2d1b1b;
     .topic-container {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
+        justify-content: center;
+        margin: 5px auto;
     }
     .topic-container .img {
         width: 100%;
         height: auto;
         align-items: center;
-        margin-bottom: 22px;
+        margin-bottom: 0;
     }
     .topic-container .topic-menu {
-        width: 100%;
+        width: 90%;
     }
 
     .edit {
@@ -443,11 +446,39 @@ display: block;
     border-top: 2px solid #8B4545;
 }
 
+.edits-carousel {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -8px;
+}
+
 .edits {
-  margin: 0 0 4px; 
+  margin: 0 0 4px;
   border-radius: 10px;
   width: 33%;
   margin: 5px;
+}
+
+@media (max-width: 600px) {
+    .edits-carousel {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 10px;
+        margin: 0 -12px 16px;
+    }
+    .edits {
+        flex: 0 0 85%;
+        width: 85%;
+        max-width: 85%;
+        margin: 0;
+        scroll-snap-align: center;
+    }
+    .edits-carousel::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .arts {
