@@ -592,6 +592,7 @@ body, html {
 /* Hide the images by default */
 .mySlides {
   display: none;
+  position: relative;
 }
 
 .mySlides img {
@@ -632,13 +633,19 @@ body, html {
 /* Caption text */
 .text {
   color: #f2f2f2;
-  box-shadow: 0 15px 12px rgba(0, 0, 0, 0.35);
   font-size: 15px;
-  padding: 8px 12px;
+  padding: 10px 14px;
   position: absolute;
-  bottom: 8px;
-  width: 100%;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 24px);
+  max-width: 92%;
   text-align: center;
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+  border-radius: 8px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 /* Number text (1/3 etc) */
@@ -647,7 +654,11 @@ body, html {
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
-  top: 0;
+  top: 8px;
+  left: 8px;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 6px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 /* The dots/bullets/indicators */
@@ -685,6 +696,22 @@ body, html {
     height: auto;
     max-height: 100%;
     object-fit: contain;
+  }
+
+  .prev, .next {
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    font-size: 18px;
+    background-color: rgba(0,0,0,0.35);
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
   }
 
   .numbertext,
