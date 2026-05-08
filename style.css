@@ -125,6 +125,27 @@ color: #2d1b1b;
         max-width: 100%;
     }
 
+    .hero-image {
+        height: auto;
+        min-height: 100px;
+        width: 210%;
+        left:-80%;
+    }
+
+    .hero-text {
+        left: 50%;
+        top: 75%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        max-width: 50px;
+    }
+
+    .hero-text .button {
+        min-height: 20px;
+        width: 210%;
+        left:-80%;
+    }
+
 }
 /* Tablet */
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -164,6 +185,27 @@ color: #2d1b1b;
         transform: none;
         text-align: center;
         width: 100%;
+    }
+
+    .hero-image {
+        height: auto;
+        min-height: 200px;
+        width: 200%;
+        left:-80%;
+    }
+
+    .hero-text {
+        left: 50%;
+        top: 75%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        max-width: 50px;
+    }
+
+    .hero-text .button {
+        min-height: 20px;
+        width: 200%;
+        left:-80%;
     }
 }
 /* Computador */
