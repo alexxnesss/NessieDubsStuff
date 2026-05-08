@@ -401,6 +401,36 @@ display: block;
 
 }
 
+body, html {
+    height: 60%;
+}
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: url("alexxness.png");
+
+  /* Set a specific height */
+  height: 60%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  font-size: 10px;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  color: rgb(234, 217, 217);
+}
+
 .covers-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -582,6 +612,27 @@ display: block;
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
+}
+
+@media (max-width: 600px) {
+  .slideshow-container {
+    width: 95%;
+    max-width: 95%;
+    aspect-ratio: 1 / 1;
+    margin: 20px auto;
+  }
+
+  .mySlides img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .numbertext,
+  .text {
+    font-size: 0.95rem;
+  }
 }
 
 @keyframes fade {
