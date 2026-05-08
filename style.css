@@ -453,7 +453,7 @@ body, html {
   background-image: url("alexxness.png");
 
   /* Set a specific height */
-  height: 60%;
+  height: 90%;
 
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
@@ -465,6 +465,7 @@ body, html {
 /* Place text in the middle of the image */
 .hero-text {
   text-align: center;
+  size: 50px;
   font-size: 10px;
   position: absolute;
   top: 50%;
