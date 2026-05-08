@@ -42,13 +42,28 @@
         align-items: center;
     }
 }
+
+@font-face {
+    font-family: 'Brown Cheese';
+    src: url("brown cheese.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Romantic Sunrise';
+    src: url("Romantic Sunrise.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-font-family: "Comic Sans MS", "Chalkboard SE", "Marker Felt", sans-serif;
-margin: 0;
-background-color: #8B7777;
-background-image: 
-  repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,.05) 10px, rgba(0,0,0,.05) 20px);
-color: #2d1b1b;
+    font-family: 'Romantic Sunrise', 'Brown Cheese', "Marker Felt", sans-serif;
+    margin: 0;
+    background-color: #8B7777;
+    background-image: 
+      repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,.05) 10px, rgba(0,0,0,.05) 20px);
+    color: #2d1b1b;
 }
 
 /* Telemóvel */
@@ -238,7 +253,7 @@ box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 3px 8px rgba(0,0,0,0.4);
 main {
 max-width: 90%;
 margin: 40px auto;
-background-color: #D4B5B0;
+background-color: #e65d48;
 background: linear-gradient(135deg, #E0C4BF 0%, #D4B5B0 50%, #C9A89F 100%);
 padding: 30px;
 border-radius: 8px;
